@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML & CSS Lengkap</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            position: relative;
+        }
+        button.copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Belajar HTML & CSS</h1>
+    <p>Penjelasan lengkap dan contoh kode yang bisa dicopy</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Apa itu HTML?</h2>
+        <p>HTML (HyperText Markup Language) adalah bahasa standar untuk membuat halaman web. HTML berfungsi untuk:</p>
+        <ul>
+            <li>Membuat struktur halaman (seperti heading, paragraf, gambar, link, dll).</li>
+            <li>Memberikan makna dan fungsi pada konten web.</li>
+            <li>Mengatur tata letak dasar dari halaman web.</li>
+        </ul>
+
+        <h3>Contoh Struktur HTML Dasar:</h3>
+        <pre><code id="htmlExample">&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Halo, Dunia!&lt;/h1&gt;
+    &lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code><button class="copy-btn" onclick="copyCode('htmlExample')">Copy</button></pre>
+    </section>
+
+    <section>
+        <h2>Apa itu CSS?</h2>
+        <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mengatur tampilan halaman web. CSS berfungsi untuk:</p>
+        <ul>
+            <li>Memberikan warna, font, dan ukuran elemen HTML.</li>
+            <li>Mengatur posisi dan layout elemen di halaman.</li>
+            <li>Memberikan efek animasi dan transisi pada halaman web.</li>
+        </ul>
+
+        <h3>Contoh Penggunaan CSS Dasar:</h3>
+        <pre><code id="cssExample">body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #0077cc;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+</code><button class="copy-btn" onclick="copyCode('cssExample')">Copy</button></pre>
+    </section>
+
+    <section>
+        <h2>Cara Menghubungkan HTML dengan CSS</h2>
+        <p>Ada tiga cara utama untuk menggunakan CSS dalam HTML:</p>
+        <ol>
+            <li><strong>Inline CSS:</strong> Menulis CSS langsung pada tag HTML menggunakan atribut <code>style</code>.</li>
+            <li><strong>Internal CSS:</strong> Menulis CSS dalam tag <code>&lt;style&gt;</code> di bagian <code>&lt;head&gt;</code>.</li>
+            <li><strong>External CSS:</strong> Menyambungkan file CSS terpisah menggunakan tag <code>&lt;link&gt;</code>.</li>
+        </ol>
+
+        <h3>Contoh Inline CSS:</h3>
+        <pre><code id="inlineCssExample">&lt;h1 style="color: blue;"&gt;Halo Dunia!&lt;/h1&gt;
+</code><button class="copy-btn" onclick="copyCode('inlineCssExample')">Copy</button></pre>
+
+        <h3>Contoh Internal CSS:</h3>
+        <pre><code id="internalCssExample">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Ini paragraf hijau.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code><button class="copy-btn" onclick="copyCode('internalCssExample')">Copy</button></pre>
+
+        <h3>Contoh External CSS:</h3>
+        <pre><code id="externalCssExample">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Judul Dengan External CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code><button class="copy-btn" onclick="copyCode('externalCssExample')">Copy</button></pre>
+    </section>
+
+</main>
+
+<footer>
+    Website ini dibuat oleh <b2>Alpin Developer</b2>
+</footer>
+
+<script>
+    function copyCode(id) {
+        const codeElement = document.getElementById(id);
+        const text = codeElement.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Kode berhasil disalin!');
+        }).catch(err => {
+            alert('Gagal menyalin kode: ' + err);
+        });
+    }
+</script>
+
+</body>
+</html>
